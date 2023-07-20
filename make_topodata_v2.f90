@@ -39,8 +39,8 @@ write(*,*) 'nx & ny :', nx, ny
 n1 = 0 
 allocate(dat(nx*ny,3), ain(n0,ndiv*ndiv), aout(nx*ny, 2), num(ndiv, ndiv))
 dat(:,:) = 0.d0
-do j = 1, ny
-  do i = 1, nx
+do i = 1, nx
+  do j = 1, ny
     n1 = n1 + 1
     dat(n1,1) = xl(1) + dble(i-1)*dl
     dat(n1,2) = yl(1) + dble(j-1)*dl
@@ -86,7 +86,7 @@ do i = 1, n1
   if(mod(i,10000)==0) write(*,*) i
 end do
 
-open(12,file='./output/coordinate.txt',status='replace')
+open(12,file='./input/coordinate.txt',status='replace')
 do i = 1,n1
   write(12,'(3f10.2)') dat(i,2), dat(i,1), dat(i,3)
 end do
