@@ -46,7 +46,7 @@
   　topo_data.Rの前半を実行することで作成可能   
 
 
-- topo_data.Rの前半部(Make fname_ndata.txt)の実行の流れ
+- topo_data.Rの前半部(Make fname_ndata.txt)の実行の流れ   
 　　fnamesに読み込むファイル名を格納して実行する
 
 
@@ -55,7 +55,9 @@
 
 
 ## 作成された座標データの確認
-topo_data.Rの後半部分を実行して，３次元の地図を出力して確認
+- topo_data.Rの後半部分を実行して，３次元の地図を出力して確認
+- 標高値がない（データの範囲外）場合-9999の値が入る
+
 
 ## 付録（Rコードの"Convert coordinae"の部分）
 - 緯度，経度のデータからxy直交座標系への変換
